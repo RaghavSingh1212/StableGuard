@@ -1,0 +1,125 @@
+{
+  "description": "Synthetic sanctions list for StableGuard. These addresses are invented and match no real entity.",
+  "entries": [
+    {
+      "wallet_address": "0xb5acb9c6b3dc2bcc90b3e75ae86212d1066396ea",
+      "list_name": "OFAC SDN",
+      "added": "2025-01-01"
+    },
+    {
+      "wallet_address": "1sgNUdsFc3rcoiLwzEgCaaaCrj4pYnpeWz2taYbqioPp",
+      "list_name": "OFAC SDN",
+      "added": "2025-02-02"
+    },
+    {
+      "wallet_address": "0x882415a26e814db1d941ebc26b8664fcd857ac6d",
+      "list_name": "EU Consolidated",
+      "added": "2025-03-03"
+    },
+    {
+      "wallet_address": "BnXgmhM32bfDiULqbMrSxPFLzVeRhRAguJqpGRun6Wm1",
+      "list_name": "UK HMT",
+      "added": "2025-04-04"
+    },
+    {
+      "wallet_address": "0xa28fc41c6e3791f6ba8341f9044e2fe0565771ee",
+      "list_name": "OFAC SDN",
+      "added": "2025-05-05"
+    },
+    {
+      "wallet_address": "ntSkLqM2mUPsh7sB6n1LhjwDBkD76BciSdfGz4UFksTN",
+      "list_name": "FATF High Risk",
+      "added": "2025-06-06"
+    },
+    {
+      "wallet_address": "0xef62224b8c00713c8940d9fb1a0121bddcf50f56",
+      "list_name": "OFAC SDN",
+      "added": "2025-07-07"
+    },
+    {
+      "wallet_address": "5UD6chastBTFyfv6FZCU2UabqL7nhMK4nyYQuM2rQeeN",
+      "list_name": "OFAC SDN",
+      "added": "2025-08-08"
+    },
+    {
+      "wallet_address": "0x6301cc1c01de2ae62ebb14437d5468cfa2b65f82",
+      "list_name": "EU Consolidated",
+      "added": "2025-09-09"
+    },
+    {
+      "wallet_address": "kJXHAo7qEyzAnmBA3j14GsP8LDj5oZUgadRoS6DtCnvQ",
+      "list_name": "UK HMT",
+      "added": "2025-10-10"
+    },
+    {
+      "wallet_address": "0x61739a9a918daa2881a14dffa5c0e26c96fde4cc",
+      "list_name": "OFAC SDN",
+      "added": "2025-11-11"
+    },
+    {
+      "wallet_address": "pRC5HN9HidJnaH77gC9PkT9Z8iAZRmPjUc2rL6RoRgZW",
+      "list_name": "FATF High Risk",
+      "added": "2025-12-12"
+    },
+    {
+      "wallet_address": "0x03174720110a4a799a9ca51c3ddc7e2705c8a8e5",
+      "list_name": "OFAC SDN",
+      "added": "2025-01-13"
+    },
+    {
+      "wallet_address": "51bhHMV2hKdFaXS8P4r1rFZgHeWKvVCak2joMkWSfce3",
+      "list_name": "OFAC SDN",
+      "added": "2025-02-14"
+    },
+    {
+      "wallet_address": "0x7f5f895f9cedd14a3ca377b85e7a3f9213676dd3",
+      "list_name": "EU Consolidated",
+      "added": "2025-03-15"
+    },
+    {
+      "wallet_address": "xw3t29kFdo1PczvYag4D5aMvZ9NbbsJMbvWH7VK833Dq",
+      "list_name": "UK HMT",
+      "added": "2025-04-16"
+    },
+    {
+      "wallet_address": "0x882474534b8258d8d0d68f98c385aafe4d8e49b1",
+      "list_name": "OFAC SDN",
+      "added": "2025-05-17"
+    },
+    {
+      "wallet_address": "hegMYq5JcgAqLvLrsBwtJRpcoCvhNGPwMbf1qQVxFxrh",
+      "list_name": "FATF High Risk",
+      "added": "2025-06-18"
+    },
+    {
+      "wallet_address": "0xafd747b8649fc189a05a3a1426f6bd57670b5fa3",
+      "list_name": "OFAC SDN",
+      "added": "2025-07-19"
+    },
+    {
+      "wallet_address": "nL8ydKSv3WJXTMtLkFp9XLgUa2VNzTsnoRPXh5YoH7XN",
+      "list_name": "OFAC SDN",
+      "added": "2025-08-20"
+    },
+    {
+      "wallet_address": "0xb17ed33236fcea7a92af70043b68b8c45807d902",
+      "list_name": "EU Consolidated",
+      "added": "2025-09-21"
+    },
+    {
+      "wallet_address": "YUGPchcTmNFcMD5oyCFMb8b7Tj69BMy3DGTpxEsqkkR8",
+      "list_name": "UK HMT",
+      "added": "2025-10-22"
+    },
+    {
+      "wallet_address": "0x777ab97fa212de203b5eed8006a7a0f4782494d8",
+      "list_name": "OFAC SDN",
+      "added": "2025-11-23"
+    },
+    {
+      "wallet_address": "TYP2zx6xszn9sF1GR3FmBnHuczBkGJtYEb4yrJMXnjyw",
+      "list_name": "FATF High Risk",
+      "added": "2025-12-24"
+    }
+  ]
+}
