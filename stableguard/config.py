@@ -17,6 +17,16 @@ import yaml
 
 # Repository root: this file is <root>/stableguard/config.py
 ROOT_DIR: Path = Path(__file__).resolve().parent.parent
+
+# Load <root>/.env if it exists, so ANTHROPIC_API_KEY can live in a file that
+# git ignores. Variables already set in the environment always win.
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(ROOT_DIR / ".env", override=False)
+except ImportError:  # python-dotenv is optional at runtime
+    pass
+
 CONFIG_DIR: Path = ROOT_DIR / "config"
 DATA_DIR: Path = ROOT_DIR / "data"
 RESULTS_DIR: Path = ROOT_DIR / "results"
