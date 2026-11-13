@@ -28,14 +28,21 @@ from stableguard.models import Decision  # noqa: E402
 
 
 def _progress(index: int, total: int, decision: Decision) -> None:
-    """Print a one line progress indicator that overwrites itself."""
+    """Print progress: a self overwriting line on a terminal, else a digest.
+
+    Redirecting the output to a file would otherwise produce one very long line
+    of carriage returns, so a piped run prints every twenty fifth payment.
+    """
     mark = "ok " if decision.correct else "MISS"
-    print(
-        f"\r[{index:>4}/{total}] {decision.transaction_id} "
-        f"{decision.verdict:<7} {mark}",
-        end="",
-        flush=True,
-    )
+    if sys.stdout.isatty():
+        print(
+            f"\r[{index:>4}/{total}] {decision.transaction_id} "
+            f"{decision.verdict:<7} {mark}",
+            end="",
+            flush=True,
+        )
+    elif index % 25 == 0 or index == total:
+        print(f"[{index:>4}/{total}] reviewed", flush=True)
 
 
 def main() -> int:
