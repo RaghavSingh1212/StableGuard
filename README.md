@@ -86,7 +86,46 @@ is running.
 
 Both agents reviewed the same 200 payments from `--seed 42`.
 
-The Claude eval is still running. Numbers go here when it finishes.
+| | Rule based | Claude (opus-5-5) |
+|---|---|---|
+| Accuracy | 0.970 | 1.000 |
+| Precision | 1.000 | 1.000 |
+| Recall | 0.806 | 1.000 |
+| F1 | 0.893 | 1.000 |
+| False positive rate | 0.000 | 0.000 |
+| Tool calls per payment | 3.73 | 2.53 |
+| Latency per payment | under 1 ms | 11.5 s |
+| Cost for the run | $0 | $4.68 |
+
+Recall by pattern:
+
+| Pattern | Rule based | Claude |
+|---|---|---|
+| velocity | 1.00 | 1.00 |
+| geo | 1.00 | 1.00 |
+| sanctions | 1.00 | 1.00 |
+| mule | 1.00 | 1.00 |
+| amount_spike | 1.00 | 1.00 |
+| merchant_mismatch | **0.00** | **1.00** |
+
+Claude went 200 for 200. It caught all 31 fraud cases, flagged none of the 169 clean payments, and did it
+with fewer tool calls than the checklist, 2.53 against 3.73. The gap was `merchant_mismatch` and it closed
+completely.
+
+The thing I did not expect is that it was also cheaper in effort, not just better. The checklist runs its
+four steps in a fixed order whether or not they are informative. Claude reads the payment first and
+usually goes straight to the two tools that matter, which is what a human analyst does.
+
+Now the part I have to be honest about: a perfect score is a problem, not a victory lap. It means the
+benchmark is too easy. My patterns are cleanly separated by construction, so once an agent knows to check
+wallet history against merchant category there is nothing left to get wrong. A real queue has ambiguous
+cases, overlapping signals and fraud that was designed to look like the clean traffic. The right response
+to 1.000 is to make the generator harder, not to put the number on a slide.
+
+The cost column matters too. $4.68 for 200 payments is about 2.3 cents each, against effectively zero for
+the checklist. At Visa's volume that difference is the whole argument. The sensible architecture is
+probably the cheap rules handling the obvious cases and a model spending its tokens on the ambiguous
+remainder, which is exactly the kind of tradeoff this harness exists to measure.
 
 ## What surprised me
 
