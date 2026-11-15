@@ -274,7 +274,14 @@ def leaderboard_mode(evaluator: Evaluator, agent_name: str) -> None:
 
     st.markdown("#### Recall by fraud type")
     st.caption("Share of each fraud pattern that the agent caught. Higher is better.")
-    st.bar_chart(recall_frame(results), height=320, color=None if len(results) > 1 else ACCENT)
+    # stack=False groups the agents side by side. Stacked bars would add two
+    # recall values together and show a meaningless 2.0 ceiling.
+    st.bar_chart(
+        recall_frame(results),
+        height=320,
+        stack=False,
+        color=None if len(results) > 1 else ACCENT,
+    )
 
     best = results[0]
     st.markdown("#### Where the leader stands")
