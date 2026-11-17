@@ -2,6 +2,8 @@
 
 An RL environment and eval harness for AI agents that review stablecoin payments for fraud.
 
+![StableGuard demo](docs/demo.gif)
+
 ## Why I built this
 
 Visa settles USDC. So do Stripe, PayPal and a growing list of people who used to be card-only shops.
